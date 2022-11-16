@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+// base class 
+class Farmer{
+	public:
+	void plants(){
+		cout<<"Farmer can plants"<<endl;
+	}
+	void harvest(){
+		cout<<"Farmer can harvest"<<endl;
+	}
+};
+//derived class
+class Consumer:public Farmer{
+	public:
+	void sell(){
+		cout<<"Farmer can sell"<<endl;
+	}
+};
+int main(){
+	//create object of the Consumer class
+	Consumer Consumer1;
+	//calling members of the base class
+	Consumer1.plants();
+	Consumer1.harvest();
+	//calling member of the derived class
+	Consumer1.sell();
+	return 0;
+}
